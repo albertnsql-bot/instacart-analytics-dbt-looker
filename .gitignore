@@ -1,4 +1,47 @@
+# -----------------------
+# Python Virtual Environments
+# -----------------------
+venv/
+env/
+dbt_env/
+.venv/
 
+# -----------------------
+# dbt Generated Files
+# -----------------------
 target/
-dbt_packages/
 logs/
+dbt_packages/
+package-lock.yml
+
+# -----------------------
+# Python Cache
+# -----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# -----------------------
+# Environment Variables
+# -----------------------
+.env
+
+# -----------------------
+# IDE / Editor
+# -----------------------
+.vscode/
+.idea/
+
+# -----------------------
+# OS Files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Temporary Files
+# -----------------------
+*.log
+*.tmp
+*.swp
