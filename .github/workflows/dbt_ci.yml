@@ -1,0 +1,36 @@
+name: dbt CI Pipeline
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  dbt-build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dbt
+        run: |
+          pip install dbt-core
+          pip install dbt-snowflake
+
+      - name: Install dbt packages
+        working-directory: ./dbt
+        run: dbt deps
+
+      - name: Run dbt models
+        working-directory: ./dbt
+        run: dbt run
+
+      - name: Run dbt tests
+        working-directory: ./dbt
+        run: dbt test

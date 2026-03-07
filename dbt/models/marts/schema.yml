@@ -1,0 +1,31 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: "Customer dimension table containing customer attributes."
+
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_name
+        description: "Customer full name"
+
+  - name: fct_orders
+    description: "Fact table capturing order transactions."
+
+    columns:
+      - name: order_id
+        description: "Primary key for orders"
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Foreign key referencing dim_customers"
+        tests:
+          - not_null
