@@ -2,6 +2,10 @@
 
 This repository demonstrates an **end-to-end analytics engineering workflow** built using the Instacart dataset.
 
+[![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?logo=snowflake&logoColor=white)](https://snowflake.com)
+[![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)](https://getdbt.com)
+[![LookML](https://img.shields.io/badge/LookML-4285F4?logo=looker&logoColor=white)](https://cloud.google.com/looker)
+
 * 📧 Email: albertnsql@gmail.com
 * 💼 LinkedIn: https://www.linkedin.com/in/albertn97
 
